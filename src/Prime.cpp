@@ -4,12 +4,12 @@
 
 void Prime::setValue(int n) {
 	value = n;
-	isPrime = testPrime(n);
+	isPrime = checkPrime(n);
 }
 bool Prime::isValid() {
 	return isPrime;
 }
-bool Prime::testPrime(int n) {
+bool Prime::checkPrime(int n) {
 	for (int i = 2; i * i <= n; i++) {
 		if (n % i == 0) return false;
 	}
@@ -18,14 +18,14 @@ bool Prime::testPrime(int n) {
 int Prime::countBetween(Prime& p) {
 	int count = 0;
 	for (int i = std::min(value, p.value) + 1; i < std::max(value, p.value); i++) {
-		if (testPrime(i)) count++;
+		if (checkPrime(i)) count++;
 	}
 	return count;
 }
 Prime Prime::nextPrime() {
 	int i;
 	for (i = value + 1; 1; i++) {
-		if (testPrime(i)) break;
+		if (checkPrime(i)) break;
 	}
 	Prime p;
 	p.value = i;
@@ -34,10 +34,4 @@ Prime Prime::nextPrime() {
 }
 int Prime::getValue() {
 	return value;
-}
-bool Prime::checkPrime(int n) {
-	for (int i = 2; i * i <= n; i++) {
-		if (n % i == 0) return false;
-	}
-	return true;
 }

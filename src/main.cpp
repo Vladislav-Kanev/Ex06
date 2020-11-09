@@ -19,6 +19,6 @@ int main() {
 	Prime num3 = num2.nextPrime();		// проверка функции nextPrime
 	std::cout << "Create and set next prime value from 11: " << num3.getValue() << " " << num3.isValid() << "\n";
 
-	std::cout << "Test if the number is prime (true): " << num3.testPrime(149) << "\n";		// проверка функции testPrime 
-	std::cout << "Test if the number is prime (false): " << num3.testPrime(4) << "\n";
+	std::cout << "Test if the number is prime (true): " << num3.checkPrime(149) << "\n";		// проверка функции testPrime 
+	std::cout << "Test if the number is prime (false): " << num3.checkPrime(4) << "\n";
 }
