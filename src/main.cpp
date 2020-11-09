@@ -1,6 +1,6 @@
 #include<iostream>
-#include "../include/Prime.h"
-//#include "Prime.h"
+//#include "../include/Prime.h"
+#include "Prime.h"
 
 int main() {
 	Prime p;		// создание класса, вывод его значения и проверка на простоту

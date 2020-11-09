@@ -1,5 +1,5 @@
-#include "../include/Prime.h"
-//#include "Prime.h"
+//#include "../include/Prime.h"
+#include "Prime.h"
 #include <algorithm>
 
 void Prime::setValue(int n) {
